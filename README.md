@@ -3,7 +3,7 @@ Repositorio para que empresas vean mis proyectos
 
 Consideraciones:
  -Hay 2 ramas para visualizar proyectos: "rama-basica" es para proyectos básicos de python nativo.
- -La rama "main", contiene proyectos intermedios con CRUD API y conexión a BD en PostgrSQL.
+ -La rama "main", contiene proyectos intermedios con CRUD API y conexión a BD con SQLlite.
  -Periódicamente estoy mejorando proyectos existentes.
  -Desde principios del 2025 estoy realizando una mejora absoluta en el desarrollo de Python, por lo mismo,
  estoy en capacitación constante y con certificaciones en curso. Una de ellas es, PCEP https://pythoninstitute.org/pcep
