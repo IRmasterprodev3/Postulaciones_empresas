@@ -8,4 +8,3 @@ Consideraciones:
  -Desde principios del 2025 estoy realizando una mejora absoluta en el desarrollo de Python, por lo mismo,
  estoy en capacitación constante y con certificaciones en curso. Una de ellas es, PCEP https://pythoninstitute.org/pcep
  -También es el caso de una pronta certificación en Udemy.
- -Por último, la experiencia que poseo respecto a python a ido creciendo de manera exponencial. Por ello adquiero los cursos y certificados.
