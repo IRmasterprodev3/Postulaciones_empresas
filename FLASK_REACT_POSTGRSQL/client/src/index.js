@@ -2,7 +2,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/main.css'
 import React from 'react'
-import ReactDOM from 'react-dom' //React 17
+//import ReactDOM from 'react-dom' //React 17
 import {createRoot} from 'react-dom/client' //React 18
 import NavBar from './components/Navbar';
 
