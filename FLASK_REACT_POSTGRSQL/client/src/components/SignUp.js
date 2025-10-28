@@ -16,7 +16,7 @@ const SignUpPage=()=>{
     /* **********  SOLO PARA PRUEBAS ********* */
 
     //Validación de formularios (nueva)
-    const { register, watch, handleSubmit, reset, formState:{errors} } = useForm();
+    const { register, handleSubmit, reset, formState:{errors} } = useForm(); //watch
     const [show, setShow]=useState(true)
     const [serverResponse, setServerResponse]=useState('')
 

@@ -1,8 +1,45 @@
 
 import React from "react"
 import { Link } from "react-router-dom"
+import { useAuth, logout } from '../auth'
 
+//Barra de navegación usuario logeado
+const LoggedInLinks=()=>{
+    return (
+        <>
+        <li className="nav-item">
+            <Link className="nav-link active" to="/">Inicio</Link>
+        </li>
+        <li className="nav-item">
+            <Link className="nav-link active" to="create_recipe">Crear receta</Link>
+        </li>
+        <li className="nav-item">
+            <a className="nav-link active" href="#" onClick={()=>{logout()}}>Log out</a>
+        </li>
+        </>
+    )
+}
+
+//Barra de navegación usuario NO logeado
+const LoggedOutLinks=()=>{
+    return (
+        <>
+        <li className="nav-item">
+            <Link className="nav-link active" to="/signup">SignUp</Link>
+        </li>
+        <li className="nav-item">
+            <Link className="nav-link active" to="login">Login</Link>
+        </li>
+        </>
+    )
+}
+
+
+//Barra de navegación
 const NavBar =()=>{
+
+    const [logged] = useAuth()
+    
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
@@ -12,21 +49,9 @@ const NavBar =()=>{
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li className="nav-item">
-                        <Link className="nav-link active" to="/">Inicio</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link active" to="/signup">SignUp</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link active" to="login">Login</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link active" to="create_recipe">Crear receta</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link active" to="">Log out</Link>
-                    </li>
+
+                    {logged?<LoggedInLinks/>:<LoggedOutLinks/>}
+
                     {/* <li className="nav-item dropdown">
                         <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Dropdown
