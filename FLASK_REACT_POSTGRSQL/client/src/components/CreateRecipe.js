@@ -25,7 +25,9 @@ const CreateRecipePage=()=>{
 
         fetch('/recipe/recipes', requestOptions)
         .then(res=>res.json())
-        .then(data=>console.log(data))
+        .then(data=>
+            reset()
+        )
         .catch(err=>console.log(err))
     }
 
